@@ -1,0 +1,183 @@
+{
+  "id": "1b91a515-6d6d-439c-81ea-bbe3e3814233",
+  "version": "2.0",
+  "name": "theInternet",
+  "url": "https://the-internet.herokuapp.com/abtest",
+  "tests": [{
+    "id": "407c546a-e669-42b0-a578-03034beb3ca3",
+    "name": "A/B",
+    "commands": [{
+      "id": "1add25af-4b3f-4680-b530-15920e19674e",
+      "comment": "",
+      "command": "open",
+      "target": "https://the-internet.herokuapp.com/abtest",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cc04840-deb3-473e-8fb8-bcdec3ae81b2",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@id='content']/div/h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='content']/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'A/B Test Variation 1')]", "xpath:innerText"]
+      ],
+      "value": "titleValue"
+    }, {
+      "id": "0f69a831-6360-4d54-9f35-8e46a4a8d426",
+      "comment": "",
+      "command": "if",
+      "target": "${titleValue} == \"A/B Test Variation 1\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b7faec9-07c5-4e62-90a5-bd90e99a51c9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//*[@id=\"content\"]/div/h3",
+      "targets": [],
+      "value": "A/B Test Variation 1"
+    }, {
+      "id": "d5df9ea7-5c2f-4b51-b11a-3c32aa6a428c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//*[@id=\"content\"]/div/p",
+      "targets": [],
+      "value": "Also known as split testing. This is a way in which businesses are able to simultaneously test and learn different versions of a page to see which text and/or functionality works best towards a desired outcome (e.g. a user action such as a click-through)."
+    }, {
+      "id": "d5acb17d-10f2-4e33-8166-69666dca38bb",
+      "comment": "",
+      "command": "echo",
+      "target": "-------------------------------- NO ERROR --------------------------------",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e00b417d-b17c-42c5-bc7b-7fde76e43d50",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a520b79-d3f0-4c76-9e9e-c2897127b58f",
+      "comment": "",
+      "command": "echo",
+      "target": "-------------------------------- Error --------------------------------",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4eb1469c-c655-45e4-b6ac-bf71f9a42d8c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65a30377-41e9-4358-ba79-c5a9e71d9ce4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7af18e6f-83d9-49f0-8e3d-32c50d9b707d",
+    "name": "Add/Remove Elements",
+    "commands": [{
+      "id": "d5a329cc-1003-4e7f-883b-0a17e9cad624",
+      "comment": "",
+      "command": "open",
+      "target": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76a80367-6de3-4018-b9dd-e2bbed83f06c",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ede333ba-6457-455c-8797-4925ebdd0ed1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//*[@id=\"content\"]/div/button",
+      "targets": [],
+      "value": "Add Element"
+    }, {
+      "id": "0dae0288-c4da-48cf-8ad8-e9c8c5691765",
+      "comment": "",
+      "command": "clickAt",
+      "target": "xpath=//*[@id=\"content\"]/div/button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addElement()']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Element')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e955ee9a-b640-487e-af22-24d4c1abb642",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbdde45d-9327-4275-8939-8e199ab2b9d4",
+      "comment": "",
+      "command": "times",
+      "target": "10",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95222fca-4cec-419f-aad0-2b04a78b730b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//*[@id=\"elements\"]/button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f544f0d4-8e68-4fb2-9969-fed00cb5f47e",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[@id=\"elements\"]/button",
+      "targets": [],
+      "value": "Delete"
+    }, {
+      "id": "22276ce2-7255-418f-b5c6-feeb8c7d41d4",
+      "comment": "",
+      "command": "clickAt",
+      "target": "xpath=//*[@id=\"elements\"]/button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b42c46da-735a-4d10-bf61-7030ec65bd96",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cd5f9cf-6220-4352-a849-c896d6c02038",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "db8baa84-9ca0-46d8-8747-0fbd5c6043e7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["407c546a-e669-42b0-a578-03034beb3ca3"]
+  }],
+  "urls": ["https://the-internet.herokuapp.com/abtest"],
+  "plugins": []
+}

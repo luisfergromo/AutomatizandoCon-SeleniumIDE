@@ -1,0 +1,82 @@
+{
+  "id": "5d4b116a-884b-446e-a917-fdae2cb4a52b",
+  "version": "2.0",
+  "name": "test",
+  "url": "https://iteso01-my.sharepoint.com/",
+  "tests": [{
+    "id": "e245a1cd-907d-4105-a23c-4cbf6942aa84",
+    "name": "save",
+    "commands": [{
+      "id": "d2870ae6-97f2-4008-9aa0-648e4a994d0e",
+      "comment": "",
+      "command": "times",
+      "target": "200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "806d3347-d57b-4f8a-8f99-2348948aeeab",
+      "comment": "",
+      "command": "open",
+      "target": "/personal/lromo_iteso_mx/_layouts/15/onedrive.aspx?view=5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc1cb98d-3b54-40a5-81cd-8e8428ed4665",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x743",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7772849a-dff3-471b-a0ac-8fb6ba254307",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=/html/body/div[1]/div[1]/div[2]/div/div[2]/div[2]/main/div/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[1]/span/div/div/i[2]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "c228281b-86a3-4e25-b7df-245d92ed1e02",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=/html/body/div[1]/div[1]/div[2]/div/div[2]/div[2]/main/div/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[1]/span/div/div/i[2]",
+      "targets": [
+        ["css=#header43-check .ms-Check-check", "css:finder"],
+        ["xpath=//div[@id='header43-check']/div/i[2]", "xpath:idRelative"],
+        ["xpath=//div/i[2]", "xpath:position"],
+        ["xpath=//i[contains(.,'')]", "xpath:innerText"]
+      ],
+      "value": "1000"
+    }, {
+      "id": "3cfef303-8a77-4773-8fed-c1cf7643a751",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//html/body/div[1]/div[1]/div[2]/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[1]/div[2]/button/span/span/span",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "bff3207e-e0d1-4f56-a7e9-5522678ff20d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='appRoot']/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/button/span/span/span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "475fcc94-6b8a-48d1-86c9-f7163a72b546",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "021dc945-8b9a-4b8d-8e57-345d35299816",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e245a1cd-907d-4105-a23c-4cbf6942aa84"]
+  }],
+  "urls": ["https://iteso01-my.sharepoint.com/", "https://iteso01-my.sharepoint.com/personal/lromo_iteso_mx/_layouts/15/onedrive.aspx?view=5"],
+  "plugins": []
+}
